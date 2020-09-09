@@ -1,4 +1,6 @@
 import pathlib as pl
+
+
 def find_files(path, suffix):
     results = []
     for elem_path in path.glob(f"*.{suffix}"):
@@ -8,9 +10,8 @@ def find_files(path, suffix):
 
 
 def write_makefile(path):
-  with pl.Path('GNUmakefile').open('w') as flux:
-    flux.write(GNUmakefile_content)
-
+    with pl.Path("GNUmakefile").open("w") as flux:
+        flux.write(GNUmakefile_content)
 
 
 GNUmakefile_content = """#-----------------------------------------------------------------------------
